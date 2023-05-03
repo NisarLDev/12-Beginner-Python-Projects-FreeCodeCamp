@@ -5,6 +5,6 @@ def guess(x):
     guess = 0
     while guess!= random_number:
         guess = input(f'Guess a number between 1 and {x}: ')
-        if guess < random__number:
+        if guess < random_number:
         
 guess(10)
