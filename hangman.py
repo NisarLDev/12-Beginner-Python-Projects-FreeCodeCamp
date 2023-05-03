@@ -17,3 +17,9 @@ def hangman():
         used_letters.add(user_letter)
         if user_letter in word_letters:
             word_letters.remove(user_letter)
+    
+    elif user_letterin used_letters:
+        print('You already used that character. Please try again.')
+       
+    else:
+        print('Invalidcharacter. Please try again.')
