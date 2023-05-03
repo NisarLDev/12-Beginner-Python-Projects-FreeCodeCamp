@@ -1,2 +1,3 @@
-# 12-Beginner-Python-Projects-FreeCodeCamp
-Coding course of Python
+## 12-Beginner-Python-Projects-FreeCodeCamp
+
+### Coding course of Python
