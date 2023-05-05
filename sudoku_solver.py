@@ -14,8 +14,19 @@ def is_valid(puzzle,guess,row, col):
     # figures out whether the guess at the row/col of the puzzle is a valid guess
     # returns True if is valid, False otherwise
     
-    
+    # let's start with the row:
+    row_vals = puzzle[row]
+    if guess in row_vals:
+        return False
 
+    # now the column
+    # col_vals = []
+    # for i in range(9):
+    #     col_vals.append(puzzle[i][col])
+    col_vals = [puzzle[i][col] for i in range(9)]
+    if guess in col_vals:
+        return False
+    
 def solve_sudoku(puzzle):
     # solve sudoku using backtracking
     # our puzzle is a list of lists, where each inner list is a row in our sudoku puzzle
