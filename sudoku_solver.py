@@ -16,3 +16,7 @@ def solve_sudoku(puzzle):
     
     # step 1: choose somewhere on the puzzle to make a guess
     row, col = find_next_empty(puzzle) 
+    
+    # step 1.1:if there's nowhere left, then we're done because we only allowed valid inputs
+    if row in None:
+        return True
