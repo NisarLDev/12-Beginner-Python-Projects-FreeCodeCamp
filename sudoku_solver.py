@@ -27,6 +27,17 @@ def is_valid(puzzle,guess,row, col):
     if guess in col_vals:
         return False
     
+    # and then the square
+    row_start = (row // 3) * 3 # 10 // 3 = 3, 5 // 3 = 1, 1 // 3 = 0
+    col_start = (col // 3) * 3
+
+    for r in range(row_start, row_start + 3):
+        for c in range(col_start, col_start + 3):
+            if puzzle[r][c] == guess:
+                return False
+
+    return True
+    
 def solve_sudoku(puzzle):
     # solve sudoku using backtracking
     # our puzzle is a list of lists, where each inner list is a row in our sudoku puzzle
