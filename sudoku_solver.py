@@ -1,13 +1,21 @@
 def find_next_empty(puzzle):
-    # finds
+    # finds next row, col on the puzzle that's not filled yet --> rep with -1
+    # return row, col tuple (or (None, None) if there is none)
     
+    # keep in mind that we are using 0-8 for our indices
     for r in range(9):
         for c in range(9):
             if puzzle[r][c] == -1:
                 return r, c
         
     return None, None # if no spaces in the puzzle are empty (-1)
+
+def is_valid(puzzle,guess,row, col):
+    # figures out whether the guess at the row/col of the puzzle is a valid guess
+    # returns True if is valid, False otherwise
     
+    
+
 def solve_sudoku(puzzle):
     # solve sudoku using backtracking
     # our puzzle is a list of lists, where each inner list is a row in our sudoku puzzle
@@ -20,3 +28,5 @@ def solve_sudoku(puzzle):
     # step 1.1:if there's nowhere left, then we're done because we only allowed valid inputs
     if row in None:
         return True
+
+    # step 2: if there is a place toput a number,then make a guess between 1 and 9
