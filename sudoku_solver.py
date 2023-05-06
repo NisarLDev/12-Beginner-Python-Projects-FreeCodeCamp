@@ -53,3 +53,5 @@ def solve_sudoku(puzzle):
 
     # step 2: if there is a place toput a number,then make a guess between 1 and 9
     for guess in range(1, 10): # range(1, 10) is 1, 2, 3, ... 9
+        # step 3: check if this is a valid guess
+        if is_valid(puzzle, guess, row, col):
