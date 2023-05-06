@@ -60,3 +60,6 @@ def solve_sudoku(puzzle):
             # step 4: then we recursively call our solver!
             if solve_sudoku(puzzle):
                 return True
+
+         # step 5: it not valid or if nothing gets returned true, then we need to backtrack and try a new number
+        puzzle[row][col] = -1
