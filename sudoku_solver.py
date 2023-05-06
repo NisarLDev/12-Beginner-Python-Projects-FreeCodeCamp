@@ -57,3 +57,6 @@ def solve_sudoku(puzzle):
         if is_valid(puzzle, guess, row, col):
             # step 3.1: if this is a valid guess, then place it at that spot on the puzzle
             puzzle[row][col] = guess
+            # step 4: then we recursively call our solver!
+            if solve_sudoku(puzzle):
+                return True
