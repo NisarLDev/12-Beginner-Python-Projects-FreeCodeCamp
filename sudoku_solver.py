@@ -55,3 +55,5 @@ def solve_sudoku(puzzle):
     for guess in range(1, 10): # range(1, 10) is 1, 2, 3, ... 9
         # step 3: check if this is a valid guess
         if is_valid(puzzle, guess, row, col):
+            # step 3.1: if this is a valid guess, then place it at that spot on the puzzle
+            puzzle[row][col] = guess
