@@ -16,6 +16,10 @@ def is_valid(puzzle,guess,row, col):
     # figures out whether the guess at the row/col of the puzzle is a valid guess
     # returns True if is valid, False otherwise
     
+    # for a guess to be valid, then we need to follow the sudoku rules
+    # that number must not be repeated in the row, column, or 3x3 square that it appears in
+
+    
     # let's start with the row:
     row_vals = puzzle[row]
     if guess in row_vals:
