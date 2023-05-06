@@ -63,3 +63,6 @@ def solve_sudoku(puzzle):
 
          # step 5: it not valid or if nothing gets returned true, then we need to backtrack and try a new number
         puzzle[row][col] = -1
+        
+    # step 6: if none of the numbers that we try work, then this puzzle is UNSOLVABLE!!
+    return False
